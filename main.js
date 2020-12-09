@@ -1,4 +1,77 @@
 var canvas=new fabric.Canvas('myCanvas');
+var canva=document.getElementById("myCanvas");
+ctx = canva.getContext("2d");
+var grounde="ground.png";
+groundd=new Image();
+groundd.onload=ground;
+groundd.src=grounde;
+random = Math.floor(Math.random() * 8);
+function ground() {
+    for (x = 0; x < random; x++) {
+        ctx.drawImage(groundd,0,550-x*50,50,50);
+    }
+}
+grounde="ground.png";
+groundd=new Image();
+groundd.onload=ground2;
+groundd.src=grounde;
+function ground2() {
+    for (y = 0; y < random; y++) {
+        ctx.drawImage(groundd,50,550-y*50,50,50);
+    }
+}
+grounde="ground.png";
+groundd=new Image();
+groundd.onload=ground3;
+groundd.src=grounde;
+function ground3() {
+    for (z = 0; z < random-1; z++) {
+        ctx.drawImage(groundd,100,550-z*50,50,50);
+    }
+}
+grounde="ground.png";
+groundd=new Image();
+groundd.onload=ground4;
+groundd.src=grounde;
+random2=Math.floor(Math.random() * 2);
+function ground4() {
+    if( random2==1) {
+    random;
+    }
+    else{
+    random-=2;
+    }
+    for (a = 0; a < random; a++) {
+        ctx.drawImage(groundd,150,550-a*50,50,50);
+    }
+}
+grounde="ground.png";
+groundd=new Image();
+groundd.onload=ground5;
+groundd.src=grounde;
+function ground5() {
+    for (b = 0; b < random-Math.floor(Math.random() * 3); b++) {
+        ctx.drawImage(groundd,200,550-b*50,50,50);
+    }
+}
+stone="cloud.jpg";
+stoned=new Image();
+stoned.onload=stonee;
+stoned.src=stone;
+function stonee() {
+    for (c = 0; c < random-5; c++) {
+        ctx.drawImage(stoned,250,550-c*50,50,50);
+    }
+}
+stone="cloud.jpg";
+stoned=new Image();
+stoned.onload=stonee2;
+stoned.src=stone;
+function stonee2() {
+    for (d = 0; d < random-5; d++) {
+        ctx.drawImage(stoned,250,600-d*50,50,50);
+    }
+}
 block_image_width=30;
 block_image_height=30;
 player_x=10;
